@@ -1,6 +1,6 @@
 /* Utils */
 
-const TIMELINE_END = 100000
+const TIMELINE_END = 1000
 
 let parseHHMMSS = hhmmss => {
     let groups = hhmmss.split(':')
@@ -66,15 +66,13 @@ let renderAlerts = (alertsData) => {
                     : {[x]: 1})
         }), {})
 
-    let alerts = stripes.map( x => {
+    return stripes.map(x => {
         let stripe = {...x}
 
         stripe.names = counts(x.names)
 
         return stripe
     })
-
-    return alerts
 }
 
 module.exports = {renderAlerts}
