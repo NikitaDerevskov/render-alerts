@@ -75,4 +75,11 @@ let renderAlerts = (alertsData) => {
     })
 }
 
-module.exports = {renderAlerts}
+/* Just fot test using Jest*/
+function sum(a, b) {
+    return a + b;
+}
+
+module.exports = {
+    sum,
+    renderAlerts}
