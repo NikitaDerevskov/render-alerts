@@ -37,7 +37,8 @@ let deintersect = (() => {
     }
 })()
 
-let renderAlerts = (alertsData) => {
+let stripesToRender = (alertsData) => {
+    alertsData = alertsData || []
     const MERGE_RADIUS = 30000
     const HEAT_THRESHOLD = 3
 
@@ -75,11 +76,6 @@ let renderAlerts = (alertsData) => {
     })
 }
 
-/* Just fot test using Jest*/
-function sum(a, b) {
-    return a + b;
-}
-
 module.exports = {
-    sum,
-    renderAlerts}
+    stripesToRender
+}
